@@ -34,7 +34,8 @@ app.post("/addResponse", (req, res) => {
         sleepAccessory: sleepThing
     }).then(result => {
         console.log(result)
-    })
+        res.sendStatus(200)
+    }).catch(e => res.sendStatus(500))
 })
 app.get("/getResponses", (req, res) => {
     

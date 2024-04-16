@@ -8,17 +8,13 @@ import RenderedResponses from './RenderedResponses';
 
 function App() {
   const [text, setText] = useState([])
-  const debugging_mode = false
+  const debugging_mode = true
   const url = debugging_mode === true ? "http://localhost:3001/" : "https://carefully-certain-swift.ngrok-free.app/"
 
   useEffect(() => {
     const doEverything = async () => {
       try {
-        const resultOfAPICall = await axios.get(url + "getResponses", {
-          headers: {
-            "ngrok-skip-browser-warning": true
-          }
-        })
+        const resultOfAPICall = await axios.get(url + "getResponses")
         console.log(resultOfAPICall)
       if(resultOfAPICall.length !== text.length) {
         setText(resultOfAPICall.data)
@@ -41,11 +37,10 @@ function App() {
   // })
   return (
     <>
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap')
+      </style>
       <Input />
-
-      <Response
-        text =  "hi" 
-      />
 
        <RenderedResponses
           arrayman={ text }      

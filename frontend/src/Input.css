@@ -1,0 +1,43 @@
+
+#submitbutton{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    border-width: 0px;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 1px 1px 2px #cfcfcf;
+    margin: 10px;
+
+}
+
+#submitbutton:hover {
+    box-shadow: 2px 2px 3px #cfcfcf;
+  }
+
+#inputbox{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    width: 200px;
+    height: 30px;
+
+
+}
+
+div{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: large;
+    text-align: center;
+    margin: 10px;
+    margin-top: 20px;
+}

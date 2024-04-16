@@ -1,8 +1,10 @@
 import axios from "axios";
 import './Input.css';
 
+const colors = ['#cdfc93', '#ff7ecd', '#71d7ff', 'ce81ff', '#fff68b', '#ffc97d', '#ffbfeb', '#baffd8', '#b5d5ff', '#e3b7ff']
+
 const Input = () => {
-    const debugging_mode = false
+    const debugging_mode = true
     const url = debugging_mode === true ? "http://localhost:3001/" : "https://carefully-certain-swift.ngrok-free.app/"
     const handleFormSubmit = (event) => {
         event.preventDefault()
@@ -10,14 +12,18 @@ const Input = () => {
         console.log("you answered", answer)
         axios.post(url  + "addResponse", {
             sleepThing: answer
-        }).then(result => window.location.reload()).catch(e => console.log(e))
+        }).then(result => {
+            window.location.reload()
+        }).catch(e => console.log(e))
 
     }
     return (<>
         <form onSubmit={handleFormSubmit}>
-            What do you eep with ?
+            <div>
+            Which items do you use when you're going to sleep?
+            </div>
             <input type="text" id="inputbox" />
-            <input type="submit" />
+            <input type="submit" id="submitbutton" style={{backgroundColor: colors[Math.floor(Math.random() * colors.length)]}}/>
         </form> 
     </>)
 }
