@@ -5,7 +5,7 @@ const Input = () => {
     const debugging_mode = false
     const url = debugging_mode === true ? "http://localhost:3001/" : "https://carefully-certain-swift.ngrok-free.app/"
     const handleFormSubmit = async (event) => {
-       // event.preventDefault()
+        event.preventDefault()
         const answer = event.target.inputbox.value
         console.log("you answered", answer)
        
@@ -16,6 +16,7 @@ const Input = () => {
                 })
 
                 console.log(resultOfAPICall)
+                window.location.reload() // forces reload
               }
               catch (error) {
                 console.log(error)
