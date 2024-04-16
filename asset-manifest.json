@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/monke/static/css/main.f0f39b39.css",
-    "main.js": "/monke/static/js/main.6e05fdc7.js",
+    "main.js": "/monke/static/js/main.a104c415.js",
     "static/js/453.8ab44547.chunk.js": "/monke/static/js/453.8ab44547.chunk.js",
     "static/media/logo.svg": "/monke/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/monke/index.html",
     "main.f0f39b39.css.map": "/monke/static/css/main.f0f39b39.css.map",
-    "main.6e05fdc7.js.map": "/monke/static/js/main.6e05fdc7.js.map",
+    "main.a104c415.js.map": "/monke/static/js/main.a104c415.js.map",
     "453.8ab44547.chunk.js.map": "/monke/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f0f39b39.css",
-    "static/js/main.6e05fdc7.js"
+    "static/js/main.a104c415.js"
   ]
 }
