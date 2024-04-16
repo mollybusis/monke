@@ -12,11 +12,11 @@ const Input = () => {
       
               try {
                 const resultOfAPICall = await axios.post(url  + "addResponse", {
+                    sleepThing: answer
+                },  {
                     headers: {
                         "ngrok-skip-browser-warning": true
                       }
-                    }, {
-                    sleepThing: answer
                 })
 
                 console.log(resultOfAPICall)
