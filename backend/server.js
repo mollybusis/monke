@@ -5,7 +5,9 @@ const mongoose = require("mongoose")
 const app = express()
 const port = 3001
 const Submission = require("./models/Submission")
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+const debugging_mode = true
+  const url = debugging_mode === true ? "http://localhost:3000" : "https://mollybusis.github.io/monke"
+app.use(cors({ credentials: true, origin: url }));
 app.use(express.json())
 app.get('/', (req, res) => {
   res.send('Hello World!')

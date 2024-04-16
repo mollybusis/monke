@@ -1,21 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
 import axios from "axios";
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
+import Input from './Input';
+import Response from './Response';
+import RenderedResponses from './RenderedResponses';
 
 function App() {
+  const [text, setText] = useState([])
+  const debugging_mode = true
+  const url = debugging_mode === true ? "http://localhost:3001/" : "https://carefully-certain-swift.ngrok-free.app/"
+
   useEffect(() => {
     const doEverything = async () => {
       try {
-        const resultOfAPICall = await axios.get("http://localhost:3001/getResponses")
+        const resultOfAPICall = await axios.get(url + "getResponses")
         console.log(resultOfAPICall)
+      if(resultOfAPICall.length !== text.length) {
+        setText(resultOfAPICall.data)
+      }
+  
+
       }
       catch (error) {
         console.log(error)
       }
     }
     doEverything()
-  })
+  }, [])
   // useEffect(() => {
   //   axios.post("http://localhost:3000/hello", {
   //     firstName: "Molly "
@@ -24,22 +36,20 @@ function App() {
   //   })
   // })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Input />
+
+      <Response
+        text =  "hi" 
+      />
+
+       <RenderedResponses
+          arrayman={ text }      
+      /> 
+      
+
+
+    </>
   );
 }
 
