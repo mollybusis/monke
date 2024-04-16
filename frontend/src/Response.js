@@ -1,10 +1,9 @@
+import './Response.css';
+
 export default function Response ({text}){
 
     return (<>
-        <div>
-            
-        </div> 
-        <div>
+        <div class="outside">
             {text}
         </div>
     </>)

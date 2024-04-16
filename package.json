@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "concurrently \"cd frontend && npm start\" \"cd backend && nodemon server.js\"",
-    "predeploy": "cd frontend && npm run build",
-    "deploy": "gh-pages -d build" 
+    "test": "concurrently \"cd frontend && npm start\" \"cd backend && nodemon server.js\""
+    
   },
   "author": "Molly Busis",
   "license": "ISC",
@@ -19,6 +18,5 @@
     "mongodb": "^6.5.0",
     "mongoose": "^8.3.1",
     "nodemon": "^3.1.0"
-  },
-  "homepage": "https://mollybusis.github.io/monke"
+  }
 }

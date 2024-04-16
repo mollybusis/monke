@@ -1,4 +1,4 @@
-
+import './RenderedResponses.css';
 import Response from './Response';
 export default function RenderedResponses ({arrayman}){
 
