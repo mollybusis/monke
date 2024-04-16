@@ -12,6 +12,10 @@ const Input = () => {
       
               try {
                 const resultOfAPICall = await axios.post(url  + "addResponse", {
+                    headers: {
+                        "ngrok-skip-browser-warning": true
+                      }
+                    }, {
                     sleepThing: answer
                 })
 

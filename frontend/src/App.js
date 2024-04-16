@@ -14,7 +14,11 @@ function App() {
   useEffect(() => {
     const doEverything = async () => {
       try {
-        const resultOfAPICall = await axios.get(url + "getResponses")
+        const resultOfAPICall = await axios.get(url + "getResponses", {
+          headers: {
+            "ngrok-skip-browser-warning": true
+          }
+        })
         console.log(resultOfAPICall)
       if(resultOfAPICall.length !== text.length) {
         setText(resultOfAPICall.data)
