@@ -1,0 +1,20 @@
+{
+  "name": "monke",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "concurrently \"cd frontend && npm start\" \"cd backend && nodemon server.js\""
+  },
+  "author": "Molly Busis",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.3.1",
+    "nodemon": "^3.1.0"
+  }
+}
