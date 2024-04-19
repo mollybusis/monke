@@ -10,7 +10,13 @@ const Input = () => {
         event.preventDefault()
         const answer = event.target.inputbox.value
         console.log("you answered", answer)
-        axios.post(url  + "addResponse", {
+        axios.post(url  + "addResponse",  {
+            headers:
+            {
+              "ngrok-skip-browser-warning": true
+            }
+          },
+          {
             sleepThing: answer
         }).then(result => {
             window.location.reload()
